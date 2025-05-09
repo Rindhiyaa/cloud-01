@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate Access</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e0c3fc;
+            padding: 10px 20px;
+        }
+
+        .calendar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-card {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .quote-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .interactive-section {
+            margin: 150px auto 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+            background-color: #555;
+        }
+
+        .details {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <!-- Toolbar content remains unchanged -->
+        <div>Left Button 1</div>
+        <div>Shop Name</div>
+        <div>Right Button 1</div>
+    </div>
+
+    <div class="calendar">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date">
+    </div>
+
+    <div class="quote-card">
+        <img src="https://via.placeholder.com/50" alt="Quote">
+        <p>"Justice is truth in action."</p>
+    </div>
+
+    <div class="interactive-section">
+        <div class="circle" onclick="showDetails('Details for Circle 1')">1</div>
+        <div class="circle" onclick="showDetails('Details for Circle 2')">2</div>
+        <div class="circle" onclick="showDetails('Details for Circle 3')">3</div>
+        <div class="circle" onclick="showDetails('Details for Circle 4')">4</div>
+    </div>
+
+    <div class="details" id="details">Click on a circle to see details</div>
+
+    <script>
+        function showDetails(text) {
+            document.getElementById('details').textContent = text;
+        }
+    </script>
+</body>
+</html>
